@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" >
+
+<meta name="Author" content="Karla Erazo">
+<title>Practica con javascript</title>
+<style type="text/css">
+
+
+</style>
+<script language="javascript" type="text/javascript">
+
+    function Avisa(){
+        var acepta=confirm("Atención se van a limpiar los datos del formulario");    
+        if (acepta)
+            return true;
+        else
+            return false;
+    }
+    function Comprueba(){
+        if(document.miform.nombre.value=="")    {
+            alert("No ha ingresado ningún dato");
+            document.miform.nombre.focus();
+            return false;
+        }
+        else
+            return true;
+    }
+  
+    
+</script>
+</head>
+
+<body>
+<h1>Lo que sucedera cuando pulse cada boton </h1>
+<p>El evento onsubmit se dispara cuando se pulse el botón de Enviar </p>
+<p>El evento onreset se dispara cuando se pulse el botón de Limpiar </p>
+<p>El evento onselect se activara al seleccionar el texto que ingrese en el recuadro</p>
+    <form name="miform" onreset="return Avisa()" onsubmit="return Comprueba()">
+        Nombre: <input type="text" name="nombre" size="10" onselect="myFunction()"><br><br>
+        <input type="reset" value="Limpiar">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+<head>
+    <title>creating mailing system</title>
+    <style>
+        legend {
+            display: block;
+            padding-left: 2px;
+            padding-right: 2px;
+            border: none;
+        }
+    </style>
+    <script type="text/javascript">
+        function validate() {
+  
+            var user = document.getElementById("e").value;
+            var user2 = document.getElementById("e");
+            var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (re.test(user)) {
+                alert("done");
+                return true;
+            }
+            else {
+                user2.style.border = "red solid 3px";
+                return false;
+            }
+        }
+    </script>
+</head>
+  
+<body>
+    
+        
+        <form>
+            <fieldset style="width:300px">
+                <legend>formaulario de registro</legend>
+                <table>
+                    <tr>
+                        <input type="text" 
+                            placeholder="Nombre" 
+                            maxlength="10">
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <input type="text" 
+                            placeholder="apellido" 
+                            maxlength="10">
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <input type="email" 
+                            placeholder="juan@gmail.com" id="e">
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <input type="password" placeholder="contraseña">
+                    </tr>
+                    <br><br>
+                    <tr>
+                        <input type="password" placeholder="confirmar">
+                    </tr>
+                    <br><br>
+                    
+                    <br><br>
+                    <tr>
+                        <label>genero:</label>
+                        <select id="gender">
+                            <option value="male">Hombre</option>
+                            <option value="female">mujer</option>
+                            <option value="others">otros</option>
+                        </select>
+                    </tr>
+                    <br><br>
+                    <tr><input type="submit" 
+                        onclick="validate()" value="create">
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    
+
+
+</html>
+  
+                    
+                   
+                
+            
+        
+           
+           
+
+        
+
+           
+    
+            
+    
+
+
+   
